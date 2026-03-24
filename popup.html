@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>GPT → NotebookLM</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-row">
+        <div class="logo">
+          <span class="logo-gpt">GPT</span>
+          <span class="logo-arrow">→</span>
+          <span class="logo-nlm">NLM</span>
+        </div>
+        <span class="version">v1.0</span>
+      </div>
+      <p class="header-desc">Экспорт диалога ChatGPT для NotebookLM</p>
+    </header>
+
+    <!-- Status -->
+    <section class="status-section" id="statusSection">
+      <div class="status-card" id="statusCard">
+        <div class="status-icon" id="statusIcon">⏳</div>
+        <div class="status-text" id="statusText">Нажмите «Сканировать» для анализа диалога</div>
+      </div>
+    </section>
+
+    <!-- Preview -->
+    <section class="preview-section hidden" id="previewSection">
+      <h3 class="section-title" id="chatTitle">—</h3>
+      <div class="meta-row">
+        <span class="meta-tag" id="metaCount">0 сообщений</span>
+        <span class="meta-tag" id="metaStrategy">—</span>
+      </div>
+      <div class="preview-list" id="previewList"></div>
+    </section>
+
+    <!-- Actions -->
+    <section class="actions-section">
+      <button class="btn btn-scan" id="btnScan">
+        <span class="btn-emoji">🔍</span>
+        Сканировать
+      </button>
+
+      <div class="export-group hidden" id="exportGroup">
+        <h3 class="section-title">Экспорт:</h3>
+        <div class="format-buttons">
+          <button class="btn btn-export" data-format="markdown" id="btnMd">
+            <span class="btn-emoji">📝</span>
+            <div class="btn-text">
+              <strong>Markdown</strong>
+              <small>Лучший для NotebookLM</small>
+            </div>
+          </button>
+          <button class="btn btn-export" data-format="txt" id="btnTxt">
+            <span class="btn-emoji">📄</span>
+            <div class="btn-text">
+              <strong>Текст (.txt)</strong>
+              <small>Универсальный</small>
+            </div>
+          </button>
+          <button class="btn btn-export" data-format="json" id="btnJson">
+            <span class="btn-emoji">🗂</span>
+            <div class="btn-text">
+              <strong>JSON</strong>
+              <small>Структурированный</small>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructions -->
+    <section class="instructions-section hidden" id="instructionsSection">
+      <h3 class="section-title">Далее:</h3>
+      <ol class="steps">
+        <li>Откройте <a href="https://notebooklm.google.com" target="_blank">notebooklm.google.com</a></li>
+        <li>Создайте или откройте блокнот</li>
+        <li>Нажмите <strong>«+ Источник»</strong> → загрузите файл</li>
+      </ol>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Откройте страницу ChatGPT перед экспортом</span>
+    </footer>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>
